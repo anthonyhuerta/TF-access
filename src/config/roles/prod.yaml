@@ -1,0 +1,129 @@
+user_roles:
+  prod-administrator:
+    account: prod
+    description: "Administrator privileges in the prod account"
+    policies:
+      - arn:aws:iam::aws:policy/AdministratorAccess
+
+  prod-coordinator:
+    account: prod
+    description: "Coordinator privileges in the prod account"
+    policies:
+      - arn:aws:iam::aws:policy/ReadOnlyAccess
+      - arn:aws:iam::296458053855:policy/access/emr_job_manager
+
+  prod-poweruser:
+    account: prod
+    description: "PowerUser privileges in the prod account"
+    policies:
+      - arn:aws:iam::aws:policy/PowerUserAccess
+
+  prod-readonly:
+    account: prod
+    description: "Administrator privileges in the prod account"
+    policies:
+      - arn:aws:iam::aws:policy/ReadOnlyAccess
+
+  prod-s1-intermediate:
+    account: prod
+    description: "Intermediate privileges for Sector-1 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector1-intermediate
+
+  prod-s1-advanced:
+    account: prod
+    description: "Advanced privileges for Sector-1 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector1-advanced
+
+  prod-s2-intermediate:
+    account: prod
+    description: "Intermediate privileges for Sector-2 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector2-intermediate
+
+  prod-s2-advanced:
+    account: prod
+    description: "Advanced privileges for Sector-2 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector2-intermediate
+
+  prod-s3-coordinator:
+    account: prod
+    description: "Coordinator privileges for Sector-3 in the prod account"
+
+  prod-s3-readonly:
+    account: prod
+    description: "Read-only privileges for Sector-3 in the prod account"
+
+  prod-s4-intermediate:
+    account: prod
+    description: "Intermediate privileges for Sector-4 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector4-intermediate
+
+  prod-s4-advanced:
+    account: prod
+    description: "Advanced privileges for Sector-4 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector4-intermediate
+
+  prod-s5-intermediate:
+    account: prod
+    description: "Intermediate privileges for Sector-5 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector5-intermediate
+
+  prod-s5-advanced:
+    account: prod
+    description: "Advanced privileges for Sector-5 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector5-intermediate
+
+  prod-s6-intermediate:
+    account: prod
+    description: "Intermediate privileges for Sector-6 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector6-intermediate
+
+  prod-s6-advanced:
+    account: prod
+    description: "Advanced privileges for Sector-6 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector6-intermediate
+
+  prod-s7-intermediate:
+    account: prod
+    description: "Intermediate privileges for Sector-7 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector7-intermediate
+
+  prod-s7-advanced:
+    account: prod
+    description: "Advanced privileges for Sector-7 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector7-intermediate
+
+  prod-s10-intermediate:
+    account: prod
+    description: "Intermediate privileges for Sector-10 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector10-intermediate
+
+  prod-s10-advanced:
+    account: prod
+    description: "Advanced privileges for Sector-10 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector10-intermediate
+
+  prod-s11-intermediate:
+    account: prod
+    description: "Intermediate privileges for Sector-11 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector11-intermediate
+
+  prod-s11-advanced:
+    account: prod
+    description: "Advanced privileges for Sector-11 in the prod account"
+    policies:
+      - arn:aws:iam::296458053855:policy/access/prod-sector11-intermediate

@@ -1,0 +1,18 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+*tfplan*
+
+# Crash log files
+crash.log
+
+# TFE Credentials
+.terraformrc
+
+# IDE files and directories
+*.code-workspace

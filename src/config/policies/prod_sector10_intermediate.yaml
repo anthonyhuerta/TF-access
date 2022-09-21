@@ -1,0 +1,79 @@
+metadata:
+  name: prod-sector10-intermediate
+  description: "Privileges for Sector-10 Intermediate Users"
+  accounts:
+    - prod
+
+policy:
+  Version: '2012-10-17'
+  Statement:
+
+  - Sid: ListServices
+    Effect: Allow
+    Action:
+    - cloudwatch:DescribeAlarms
+    - cloudwatch:DescribeAlarmsForMetric
+    - cloudwatch:DescribeAnomalyDetectors
+    - cloudwatch:GetDashboard
+    - cloudwatch:ListDashboards
+    - cloudwatch:ListMetrics
+    - cloudwatch:ListTagsForResource
+    - ec2:DescribeElasticGpus
+    - ec2:DescribeScheduledInstanceAvailability
+    - ec2:DescribeScheduledInstances
+    - ec2:DescribeTags
+    - ec2:GetConsoleOutput
+    - ec2:GetConsoleScreenshot
+    - eks:DescribeCluster
+    - eks:DescribeFargateProfile
+    - eks:DescribeNodegroup
+    - eks:ListClusters
+    - eks:ListFargateProfiles
+    - eks:ListNodegroups
+    - eks:ListTagsForResource
+    - elasticache:DescribeCacheClusters
+    - elasticache:DescribeCacheEngineVersions
+    - elasticache:DescribeCacheParameterGroups
+    - elasticache:DescribeCacheParameters
+    - elasticache:DescribeCacheSecurityGroups
+    - elasticache:DescribeCacheSubnetGroups
+    - elasticache:DescribeEngineDefaultParameters
+    - elasticache:DescribeEvents
+    - elasticache:DescribeGlobalReplicationGroups
+    - elasticache:DescribeReplicationGroups
+    - elasticache:DescribeReservedCacheNodes
+    - elasticache:DescribeReservedCacheNodesOfferings
+    - elasticache:ListAllowedNodeTypeModifications
+    - elasticache:ListTagsForResource
+    - es:DescribeElasticsearchDomains
+    - es:DescribeElasticsearchInstanceTypeLimits
+    - es:DescribeInboundCrossClusterSearchConnections
+    - es:DescribeOutboundCrossClusterSearchConnections
+    - es:DescribeReservedElasticsearchInstanceOfferings
+    - es:DescribeReservedElasticsearchInstances
+    - es:GetCompatibleElasticsearchVersions
+    - es:ListDomainNames
+    - es:ListElasticsearchInstanceTypeDetails
+    - es:ListElasticsearchInstanceTypes
+    - es:ListElasticsearchVersions
+    - s3:GetBucketLocation
+    - s3:ListAllMyBuckets
+    - sns:GetSubscriptionAttributes
+    - sns:GetTopicAttributes
+    - sns:ListSubscriptions
+    - sns:ListSubscriptionsByTopic
+    - sns:ListTagsForResource
+    - sns:ListTopics
+    - sqs:GetQueueAttributes
+    - sqs:GetQueueUrl
+    - sqs:ListDeadLetterSourceQueues
+    - sqs:ListQueues
+    - sqs:ListQueueTags
+    Resource: "*"
+
+  - Sid: MicroserviceQueues
+    Effect: Allow
+    Action:
+    - sqs:ReceiveMessage
+    Resource:
+    - arn:aws:sqs:us-west-2:296458053855:storefront-app-service-*

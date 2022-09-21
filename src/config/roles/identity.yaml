@@ -1,0 +1,18 @@
+user_roles:
+  identity-administrator:
+    account: identity
+    description: "Administrator privileges in the identity account"
+    policies:
+      - arn:aws:iam::aws:policy/AdministratorAccess
+
+  identity-poweruser:
+    account: identity
+    description: "PowerUser privileges in the identity account"
+    policies:
+      - arn:aws:iam::aws:policy/PowerUserAccess
+
+  identity-readonly:
+    account: identity
+    description: "Administrator privileges in the identity account"
+    policies:
+      - arn:aws:iam::aws:policy/ReadOnlyAccess

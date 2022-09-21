@@ -1,0 +1,170 @@
+user_roles:
+  beta-administrator:
+    account: beta
+    description: "Administrator privileges in the beta account"
+    policies:
+      - arn:aws:iam::aws:policy/AdministratorAccess
+
+  beta-poweruser:
+    account: beta
+    description: "PowerUser privileges in the beta account"
+    policies:
+      - arn:aws:iam::aws:policy/PowerUserAccess
+
+  beta-readonly:
+    account: beta
+    description: "Read-only privileges in the beta account"
+    policies:
+      - arn:aws:iam::aws:policy/ReadOnlyAccess
+
+  beta-s1-basic:
+    account: beta
+    description: "Basic privileges for Sector-1 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector1-basic
+
+  beta-s1-intermediate:
+    account: beta
+    description: "Intermediate privileges for Sector-1 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector1-intermediate
+
+  beta-s1-advanced:
+    account: beta
+    description: "Advanced privileges for Sector-1 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector1-basic
+
+  beta-s2-basic:
+    account: beta
+    description: "Basic privileges for Sector-2 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector2-basic
+
+  beta-s2-intermediate:
+    account: beta
+    description: "Intermediate privileges for Sector-2 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector2-basic
+
+  beta-s2-advanced:
+    account: beta
+    description: "Advanced privileges for Sector-2 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector2-basic
+
+  beta-s3-poweruser:
+    account: beta
+    description: "PowerUser privileges for Sector-3 in the beta account"
+
+  beta-s3-readonly:
+    account: beta
+    description: "Read-only privileges for Sector-3 in the beta account"
+
+  beta-s4-basic:
+    account: beta
+    description: "Basic privileges for Sector-4 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector4-basic
+
+  beta-s4-intermediate:
+    account: beta
+    description: "Intermediate privileges for Sector-4 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector4-basic
+
+  beta-s4-advanced:
+    account: beta
+    description: "Advanced privileges for Sector-4 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector4-basic
+
+  beta-s5-basic:
+    account: beta
+    description: "Basic privileges for Sector-5 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector5-basic
+
+  beta-s5-intermediate:
+    account: beta
+    description: "Intermediate privileges for Sector-5 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector5-intermediate
+
+  beta-s5-advanced:
+    account: beta
+    description: "Advanced privileges for Sector-5 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector5-basic
+
+  beta-s6-basic:
+    account: beta
+    description: "Basic privileges for Sector-6 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector6-basic
+
+  beta-s6-intermediate:
+    account: beta
+    description: "Intermediate privileges for Sector-6 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector6-basic
+
+  beta-s6-advanced:
+    account: beta
+    description: "Advanced privileges for Sector-6 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector6-basic
+
+  beta-s7-basic:
+    account: beta
+    description: "Basic privileges for Sector-7 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector7-basic
+
+  beta-s7-intermediate:
+    account: beta
+    description: "Intermediate privileges for Sector-7 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector7-basic
+
+  beta-s7-advanced:
+    account: beta
+    description: "Advanced privileges for Sector-7 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector7-basic
+
+  beta-s10-basic:
+    account: beta
+    description: "Basic privileges for Sector-10 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector10-basic
+
+  beta-s10-intermediate:
+    account: beta
+    description: "Intermediate privileges for Sector-10 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector10-basic
+
+  beta-s10-advanced:
+    account: beta
+    description: "Advanced privileges for Sector-10 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector10-basic
+
+  beta-s11-basic:
+    account: beta
+    description: "Basic privileges for Sector-11 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector11-basic
+
+  beta-s11-intermediate:
+    account: beta
+    description: "Intermediate privileges for Sector-11 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector11-basic
+
+  beta-s11-advanced:
+    account: beta
+    description: "Advanced privileges for Sector-11 in the beta account"
+    policies:
+      - arn:aws:iam::888558705950:policy/access/beta-sector11-basic

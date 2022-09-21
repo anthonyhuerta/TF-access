@@ -1,0 +1,246 @@
+metadata:
+  name: beta-sector11-basic
+  description: "Privileges for Sector-11 Basic Users"
+  accounts:
+    - beta
+
+policy:
+  Version: '2012-10-17'
+  Statement:
+
+  - Sid: ListServices
+    Effect: Allow
+    Action:
+    - cloudwatch:DescribeAlarms
+    - cloudwatch:DescribeAlarmsForMetric
+    - cloudwatch:DescribeAnomalyDetectors
+    - cloudwatch:GetDashboard
+    - cloudwatch:ListDashboards
+    - cloudwatch:ListMetrics
+    - cloudwatch:ListTagsForResource
+    - ec2:DescribeElasticGpus
+    - ec2:DescribeScheduledInstanceAvailability
+    - ec2:DescribeScheduledInstances
+    - ec2:DescribeTags
+    - ec2:GetConsoleOutput
+    - ec2:GetConsoleScreenshot
+    - eks:DescribeCluster
+    - eks:DescribeFargateProfile
+    - eks:DescribeNodegroup
+    - eks:ListClusters
+    - eks:ListFargateProfiles
+    - eks:ListNodegroups
+    - eks:ListTagsForResource
+    - elasticache:DescribeCacheClusters
+    - elasticache:DescribeCacheEngineVersions
+    - elasticache:DescribeCacheParameterGroups
+    - elasticache:DescribeCacheParameters
+    - elasticache:DescribeCacheSecurityGroups
+    - elasticache:DescribeCacheSubnetGroups
+    - elasticache:DescribeEngineDefaultParameters
+    - elasticache:DescribeEvents
+    - elasticache:DescribeGlobalReplicationGroups
+    - elasticache:DescribeReplicationGroups
+    - elasticache:DescribeReservedCacheNodes
+    - elasticache:DescribeReservedCacheNodesOfferings
+    - elasticache:ListAllowedNodeTypeModifications
+    - elasticache:ListTagsForResource
+    - es:DescribeElasticsearchDomains
+    - es:DescribeElasticsearchInstanceTypeLimits
+    - es:DescribeInboundCrossClusterSearchConnections
+    - es:DescribeOutboundCrossClusterSearchConnections
+    - es:DescribeReservedElasticsearchInstanceOfferings
+    - es:DescribeReservedElasticsearchInstances
+    - es:GetCompatibleElasticsearchVersions
+    - es:ListDomainNames
+    - es:ListElasticsearchInstanceTypeDetails
+    - es:ListElasticsearchInstanceTypes
+    - es:ListElasticsearchVersions
+    - s3:GetBucketLocation
+    - s3:ListAllMyBuckets
+    - sns:GetSubscriptionAttributes
+    - sns:GetTopicAttributes
+    - sns:ListSubscriptions
+    - sns:ListSubscriptionsByTopic
+    - sns:ListTagsForResource
+    - sns:ListTopics
+    - sqs:GetQueueAttributes
+    - sqs:GetQueueUrl
+    - sqs:ListDeadLetterSourceQueues
+    - sqs:ListQueues
+    - sqs:ListQueueTags
+    Resource: "*"
+
+  - Sid: MicroserviceQueues
+    Effect: Allow
+    Action:
+    - sqs:ReceiveMessage
+    Resource:
+    - arn:aws:sqs:us-west-2:888558705950:data-experiment-service-*
+    - arn:aws:sqs:us-west-2:888558705950:machine-learning-service-*
+
+  # Allow glue-job console access
+  - Sid: GlueConsoleAccess
+    Effect: Allow
+    Action:
+    - glue:SearchTables
+    - glue:GetCrawler
+    - iam:ListRoleTags
+    - glue:GetDataCatalogEncryptionSettings
+    - glue:BatchGetDevEndpoints
+    - glue:CheckSchemaVersionValidity
+    - glue:GetTableVersions
+    - glue:GetPartitions
+    - glue:GetMLTransform
+    - glue:GetWorkflowRunProperties
+    - glue:GetSchema
+    - glue:GetDevEndpoint
+    - glue:GetSecurityConfiguration
+    - glue:GetResourcePolicy
+    - glue:GetTrigger
+    - glue:GetUserDefinedFunction
+    - cloudwatch:ListDashboards
+    - cloudwatch:ListTagsForResource
+    - glue:GetJobRun
+    - glue:StartWorkflowRun
+    - glue:GetResourcePolicies
+    - glue:StopCrawlerSchedule
+    - glue:GetUserDefinedFunctions
+    - glue:GetClassifier
+    - glue:GetSchemaByDefinition
+    - glue:TagResource
+    - glue:ListWorkflows
+    - cloudwatch:GetDashboard
+    - glue:GetJobs
+    - glue:GetTables
+    - glue:GetSchemaVersionsDiff
+    - glue:GetTriggers
+    - glue:GetWorkflowRun
+    - glue:GetMapping
+    - glue:GetPartition
+    - glue:GetDevEndpoints
+    - glue:BatchGetWorkflows
+    - glue:ListDevEndpoints
+    - glue:BatchGetJobs
+    - glue:StartCrawlerSchedule
+    - glue:StartJobRun
+    - cloudwatch:GetMetricStream
+    - glue:ListRegistries
+    - glue:GetJob
+    - glue:GetWorkflow
+    - glue:ListSchemaVersions
+    - glue:GetConnections
+    - glue:GetCrawlers
+    - tag:GetResources
+    - glue:GetClassifiers
+    - cloudwatch:GetMetricData
+    - logs:DescribeLogStreams
+    - glue:StopTrigger
+    - glue:StopCrawler
+    - cloudwatch:ListMetrics
+    - glue:StartTrigger
+    - glue:GetCatalogImportStatus
+    - glue:GetTableVersion
+    - glue:GetConnection
+    - glue:ListMLTransforms
+    - glue:StartCrawler
+    - glue:ListSchemas
+    - glue:UntagResource
+    - glue:GetJobBookmark
+    - glue:GetMLTransforms
+    - glue:GetRegistry
+    - glue:ResumeWorkflowRun
+    - logs:DescribeLogGroups
+    - iam:ListRoles
+    - glue:BatchGetPartition
+    - glue:GetMLTaskRuns
+    - glue:GetSecurityConfigurations
+    - glue:ListTriggers
+    - glue:StopWorkflowRun
+    - glue:GetDatabases
+    - glue:ListJobs
+    - glue:GetTags
+    - glue:GetTable
+    - glue:GetDatabase
+    - glue:GetMLTaskRun
+    - glue:GetDataflowGraph
+    - glue:BatchGetCrawlers
+    - glue:GetSchemaVersion
+    - glue:QuerySchemaVersionMetadata
+    - glue:BatchGetTriggers
+    - glue:GetWorkflowRuns
+    - glue:GetPlan
+    - glue:ListCrawlers
+    - glue:GetCrawlerMetrics
+    - glue:GetJobRuns
+    Resource: "*"
+
+  # Allow users to access the glue-job logs(Errors/Logs) for debugging
+  - Sid: CloudWatchGlueLogs
+    Effect: Allow
+    Action:
+    - logs:GetLogEvents
+    Resource:
+    - arn:aws:logs:*:*:log-group:/aws-glue/*:log-stream:*
+
+  # Allow users to test the glue-job connections
+  - Sid: AccessToPassRole
+    Effect: Allow
+    Action:
+    - iam:GetRole
+    - iam:PassRole
+    Resource:
+    - arn:aws:iam::888558705950:role/*-datalake
+  # Allow users to test the glue-job connections
+  - Sid: DescribeGlueConnections
+    Effect: Allow
+    Action:
+    - ec2:DescribeSecurityGroups
+    - ec2:DescribeInstances
+    - ec2:DescribeSubnets
+    Resource: "*"
+
+  # Allow users to access the Athena
+  - Sid: QueryDataAndMetadataViaAthena
+    Effect: Allow
+    Action:
+    - athena:BatchGetNamedQuery
+    - athena:BatchGetQueryExecution
+    - athena:CreateNamedQuery
+    - athena:DeleteNamedQuery
+    - athena:GetDataCatalog
+    - athena:GetDatabase
+    - athena:GetNamedQuery
+    - athena:GetQueryExecution
+    - athena:GetQueryResults
+    - athena:GetQueryResultsStream
+    - athena:GetTableMetadata
+    - athena:GetWorkGroup
+    - athena:ListDataCatalogs
+    - athena:ListDatabases
+    - athena:ListNamedQueries
+    - athena:ListQueryExecutions
+    - athena:ListTableMetadata
+    - athena:ListTagsForResource
+    - athena:ListWorkGroups
+    - athena:StartQueryExecution
+    - athena:StopQueryExecution
+    - glue:GetDatabase
+    - glue:GetDatabases
+    - glue:GetTable
+    - glue:GetTables
+    Resource: "*"
+
+    # Allow athena to access s3 for storing the logs/outputs
+  - Sid: AthenaLogAccess
+    Effect: Allow
+    Action:
+    - s3:GetBucketLocation
+    - s3:GetObject
+    - s3:ListBucket
+    - s3:ListBucketMultipartUploads
+    - s3:ListMultipartUploadParts
+    - s3:AbortMultipartUpload
+    - s3:PutObject
+    Resource:
+    - arn:aws:s3:::aws-athena-query-results-*

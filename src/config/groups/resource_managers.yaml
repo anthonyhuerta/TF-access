@@ -1,0 +1,7 @@
+user_groups:
+  # This is a role for member to assume administrators privileges 
+  womply-admins:
+    roles:
+      - beta-administrator
+      - prod-administrator
+    members: []

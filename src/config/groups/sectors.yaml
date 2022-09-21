@@ -1,0 +1,243 @@
+user_groups:
+
+  # Sector-0: Represents all sectors
+  s0-basic:
+    roles:
+      - beta-readonly
+
+  s0-intermediate:
+    roles:
+      - beta-poweruser
+      - beta-readonly
+
+  s0-advanced:
+    roles:
+      - beta-poweruser
+      - beta-readonly
+      - prod-coordinator
+      - prod-readonly
+    members:
+      - ealva
+
+  # Sector-1: CDE-borderline
+  s1-basic:
+    roles:
+      - beta-s1-basic
+    members:
+      - athakral
+      - cmorgan
+      - mchigurupati
+
+  s1-intermediate:
+    roles:
+      - beta-s1-basic
+      - beta-s1-intermediate
+      - prod-s1-intermediate
+    members:
+      - athakral
+      - gthimmapuram
+      - mchigurupati
+
+  s1-advanced:
+    roles:
+      - beta-s1-basic
+      - beta-s1-intermediate
+      - beta-s1-advanced
+      - prod-s1-intermediate
+      - prod-s1-advanced
+
+  # Sector-2: Merchant-based and non-CDE transaction data pipelines and microservices
+  s2-basic:
+    roles:
+      - beta-s2-basic
+
+  s2-intermediate:
+    roles:
+      - beta-s2-basic
+      - beta-s2-intermediate
+      - prod-s2-intermediate
+    members:
+      - babney
+      - gthimmapuram
+      - jmacdonald
+
+  s2-advanced:
+    roles:
+      - beta-s2-basic
+      - beta-s2-intermediate
+      - beta-s2-advanced
+      - prod-s2-intermediate
+      - prod-s2-advanced
+
+  # Sector-3: Product/entitlement-related jobs and services
+  s3-basic:
+    roles:
+      - beta-s3-readonly
+
+  s3-intermediate:
+    roles:
+      - beta-s3-poweruser
+      - beta-s3-readonly
+
+  s3-advanced:
+    roles:
+      - beta-s3-poweruser
+      - beta-s3-readonly
+      - prod-s3-coordinator
+      - prod-s3-readonly
+
+  # Sector-4: SDS & Reputation
+  s4-basic:
+    roles:
+      - beta-s4-basic
+    members:
+      - adudhe
+      - bthite
+      - pdaniv
+
+  s4-intermediate:
+    roles:
+      - beta-s4-basic
+      - beta-s4-intermediate
+      - prod-s4-intermediate
+    members:
+      - gthimmapuram
+
+  s4-advanced:
+    roles:
+      - beta-s4-basic
+      - beta-s4-intermediate
+      - beta-s4-advanced
+      - prod-s4-intermediate
+      - prod-s4-advanced
+
+  # Sector-5: Merchant/customer-facing apps and their backend services
+  s5-basic:
+    roles:
+      - beta-s5-basic
+    members:
+      - blupashko
+      - ubhusan
+      - vorshulyak
+
+  s5-intermediate:
+    roles:
+      - beta-s5-basic
+      - beta-s5-intermediate
+      - prod-s5-intermediate
+    members:
+      - babney
+      - gthimmapuram
+      - jmacdonald
+
+  s5-advanced:
+    roles:
+      - beta-s5-basic
+      - beta-s5-intermediate
+      - beta-s5-advanced
+      - prod-s5-intermediate
+      - prod-s5-advanced
+
+  # Sector-6: Third-party ETLs and related services
+  s6-basic:
+    roles:
+      - beta-s6-basic
+    members:
+      - vgajula
+      - vorshulyak
+
+  s6-intermediate:
+    roles:
+      - beta-s6-basic
+      - beta-s6-intermediate
+      - prod-s6-intermediate
+    members:
+      - babney
+      - gthimmapuram
+      - jmacdonald
+
+  s6-advanced:
+    roles:
+      - beta-s6-basic
+      - beta-s6-intermediate
+      - beta-s6-advanced
+      - prod-s6-intermediate
+      - prod-s6-advanced
+
+  # Sector-7: Business-intelligence/Data-Engineering (BI/DE) jobs and pipelines
+  s7-basic:
+    roles:
+      - beta-s7-basic
+    members:
+      - vgajula
+      - vorshulyak
+
+  s7-intermediate:
+    roles:
+      - beta-s7-basic
+      - beta-s7-intermediate
+      - prod-s7-intermediate
+    members:
+      - babney
+      - jmacdonald
+
+  s7-advanced:
+    roles:
+      - beta-s7-basic
+      - beta-s7-intermediate
+      - beta-s7-advanced
+      - prod-s7-intermediate
+      - prod-s7-advanced
+
+  # Sector-10: All front-end apps/repos/assets
+  s10-basic:
+    roles:
+      - beta-s10-basic
+
+  s10-intermediate:
+    roles:
+      - beta-s10-basic
+      - beta-s10-intermediate
+      - prod-s10-intermediate
+    members:
+      - babney
+      - jmacdonald
+
+  s10-advanced:
+    roles:
+      - beta-s10-basic
+      - beta-s10-intermediate
+      - beta-s10-advanced
+      - prod-s10-intermediate
+      - prod-s10-advanced
+
+  # Sector-11: Data Analytics (mostly for BI/DE & Finance)
+  s11-basic:
+    roles:
+      - beta-s11-basic
+    members:
+      - amishra
+      - avidekar
+      - ssonwane
+
+  s11-intermediate:
+    roles:
+      - beta-s11-basic
+      - beta-s11-intermediate
+      - prod-s11-intermediate
+    members:
+      - amishra
+      - avidekar
+      - cmorgan
+      - ssonwane
+
+  s11-advanced:
+    roles:
+      - beta-s11-basic
+      - beta-s11-intermediate
+      - beta-s11-advanced
+      - prod-s11-intermediate
+      - prod-s11-advanced
+    members:
+      - linnea 
+

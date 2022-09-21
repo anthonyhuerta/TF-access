@@ -1,0 +1,100 @@
+metadata:
+  name: prod-sector6-intermediate
+  description: "Privileges for Sector-6 Intermediate Users"
+  accounts:
+    - prod
+
+policy:
+  Version: '2012-10-17'
+  Statement:
+
+  - Sid: ListServices
+    Effect: Allow
+    Action:
+    - cloudwatch:DescribeAlarms
+    - cloudwatch:DescribeAlarmsForMetric
+    - cloudwatch:DescribeAnomalyDetectors
+    - cloudwatch:GetDashboard
+    - cloudwatch:ListDashboards
+    - cloudwatch:ListMetrics
+    - cloudwatch:ListTagsForResource
+    - ec2:DescribeElasticGpus
+    - ec2:DescribeScheduledInstanceAvailability
+    - ec2:DescribeScheduledInstances
+    - ec2:DescribeTags
+    - ec2:GetConsoleOutput
+    - ec2:GetConsoleScreenshot
+    - eks:DescribeCluster
+    - eks:DescribeFargateProfile
+    - eks:DescribeNodegroup
+    - eks:ListClusters
+    - eks:ListFargateProfiles
+    - eks:ListNodegroups
+    - eks:ListTagsForResource
+    - elasticache:DescribeCacheClusters
+    - elasticache:DescribeCacheEngineVersions
+    - elasticache:DescribeCacheParameterGroups
+    - elasticache:DescribeCacheParameters
+    - elasticache:DescribeCacheSecurityGroups
+    - elasticache:DescribeCacheSubnetGroups
+    - elasticache:DescribeEngineDefaultParameters
+    - elasticache:DescribeEvents
+    - elasticache:DescribeGlobalReplicationGroups
+    - elasticache:DescribeReplicationGroups
+    - elasticache:DescribeReservedCacheNodes
+    - elasticache:DescribeReservedCacheNodesOfferings
+    - elasticache:ListAllowedNodeTypeModifications
+    - elasticache:ListTagsForResource
+    - es:DescribeElasticsearchDomains
+    - es:DescribeElasticsearchInstanceTypeLimits
+    - es:DescribeInboundCrossClusterSearchConnections
+    - es:DescribeOutboundCrossClusterSearchConnections
+    - es:DescribeReservedElasticsearchInstanceOfferings
+    - es:DescribeReservedElasticsearchInstances
+    - es:GetCompatibleElasticsearchVersions
+    - es:ListDomainNames
+    - es:ListElasticsearchInstanceTypeDetails
+    - es:ListElasticsearchInstanceTypes
+    - es:ListElasticsearchVersions
+    - s3:GetBucketLocation
+    - s3:ListAllMyBuckets
+    - sns:GetSubscriptionAttributes
+    - sns:GetTopicAttributes
+    - sns:ListSubscriptions
+    - sns:ListSubscriptionsByTopic
+    - sns:ListTagsForResource
+    - sns:ListTopics
+    - sqs:GetQueueAttributes
+    - sqs:GetQueueUrl
+    - sqs:ListDeadLetterSourceQueues
+    - sqs:ListQueues
+    - sqs:ListQueueTags
+    Resource: "*"
+
+  - Sid: MicroserviceQueues
+    Effect: Allow
+    Action:
+    - sqs:ReceiveMessage
+    Resource:
+    - arn:aws:sqs:us-west-2:296458053855:affiliate-marketing-service-*
+    - arn:aws:sqs:us-west-2:296458053855:bizshield-service-*
+    - arn:aws:sqs:us-west-2:296458053855:ce-dashboard-service-*
+    - arn:aws:sqs:us-west-2:296458053855:contact-verification-service-*
+    - arn:aws:sqs:us-west-2:296458053855:customer-email-service-*
+    - arn:aws:sqs:us-west-2:296458053855:customer-engagement-service-*
+    - arn:aws:sqs:us-west-2:296458053855:customer-graph-service-*
+    - arn:aws:sqs:us-west-2:296458053855:customer-import-service-*
+    - arn:aws:sqs:us-west-2:296458053855:customer-survey-service-*
+    - arn:aws:sqs:us-west-2:296458053855:email-service-*
+    - arn:aws:sqs:us-west-2:296458053855:external-data-proxy-service-*
+    - arn:aws:sqs:us-west-2:296458053855:feedback-service-*
+    - arn:aws:sqs:us-west-2:296458053855:insights-service-*
+    - arn:aws:sqs:us-west-2:296458053855:mailcatcher-service-*
+    - arn:aws:sqs:us-west-2:296458053855:ppp-service-*
+    - arn:aws:sqs:us-west-2:296458053855:sba-integration-service-*
+    - arn:aws:sqs:us-west-2:296458053855:telephony-service-*
+    - arn:aws:sqs:us-west-2:296458053855:transaction-component-service-*
+    - arn:aws:sqs:us-west-2:296458053855:txn-component-service-*
+    - arn:aws:sqs:us-west-2:296458053855:user-service-*
+    - arn:aws:sqs:us-west-2:296458053855:website-monitoring-service-*
+    - arn:aws:sqs:us-west-2:296458053855:website-report-service-*

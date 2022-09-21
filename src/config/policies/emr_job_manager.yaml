@@ -1,0 +1,30 @@
+metadata:
+  name: emr_job_manager
+  description: "Provides the ability to manage EMR jobs"
+  accounts:
+    - beta
+    - prod
+
+policy:
+  Version: '2012-10-17'
+  Statement:
+
+  - Sid: EmrJobManagement
+    Effect: Allow
+    Action:
+    - elasticmapreduce:RunJobFlow
+    - elasticmapreduce:ListClusters
+    - elasticmapreduce:ListSteps
+    - elasticmapreduce:TerminateJobFlows
+    Resource: "*"
+
+  # Ref: https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-iam-roles.html
+  # Note: The below roles, although managed by AWS, still need to be created.
+  - Sid: EmrPassRole
+    Effect: Allow
+    Action:
+    - iam:PassRole
+    Resource:
+    - arn:aws:iam::*:role/EMR_DefaultRole
+    - arn:aws:iam::*:role/EMR_EC2_DefaultRole
+    - arn:aws:iam::*:role/EMR_AutoScaling_DefaultRole

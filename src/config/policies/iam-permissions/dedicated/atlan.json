@@ -1,0 +1,41 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetBucketLocation"
+      ],
+      "Resource": [
+        "arn:aws:s3:::womply-builds"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::womply-builds"
+      ],
+      "Condition": {
+        "StringLike": {
+          "s3:prefix": [
+            "data-decisions/beta/dbt/*",
+            "data-decisions/prod/dbt/*"
+          ]
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::womply-builds/data-decisions/beta/dbt/*",
+        "arn:aws:s3:::womply-builds/data-decisions/prod/dbt/*"
+      ]
+    }
+  ]
+}

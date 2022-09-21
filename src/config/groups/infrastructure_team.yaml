@@ -1,0 +1,37 @@
+user_groups:
+  infra-advanced:
+    roles:
+      - identity-administrator
+      - identity-poweruser
+      - identity-readonly
+      - beta-administrator
+      - beta-poweruser
+      - beta-readonly
+      - prod-administrator
+      - prod-poweruser
+      - prod-readonly
+    members:
+      - ahuerta
+      - arao
+      - ehanig
+      - gvidwans
+      - kdas
+      - nabil
+      - ssingh
+
+  infra-intermediate:
+    roles:
+      - identity-poweruser
+      - identity-readonly
+      - beta-poweruser
+      - beta-readonly
+      - prod-poweruser
+      - prod-readonly
+
+  infra-basic:
+    roles:
+      - identity-readonly
+      - beta-readonly
+      - prod-readonly
+    members:
+      - msilvey

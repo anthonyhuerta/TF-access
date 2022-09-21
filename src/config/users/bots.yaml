@@ -1,0 +1,4 @@
+bots:
+  atlan:
+    policies:
+    - dedicated/atlan.json
